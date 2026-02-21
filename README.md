@@ -101,5 +101,5 @@ Este modelo permite diagnóstico ofensivo accionable para análisis táctico y s
 ---
 
 Desarrollado por:
-Dan Bernal | Football Analytics
-Data Analyst | Tactical & Performance Analysis
+Dan Bernal | Data, Tactical & Performance Analyst 
+Football Analytics
