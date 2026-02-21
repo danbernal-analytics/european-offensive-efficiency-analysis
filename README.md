@@ -14,6 +14,7 @@ La capacidad de generar oportunidades (volumen) de la capacidad de convertirlas 
 ## ⚙️ Metodología y Diseño Analítico
 
 ### 1. Integridad y Calidad de Datos
+
 * Datos públicos a nivel de partido.
 * Top 5 ligas europeas: Premier League, La Liga, Bundesliga, Serie A y Ligue 1.
 * Periodo de análisis: 2012–2025.
@@ -25,7 +26,7 @@ Se aplicó un corte temporal post-2012 tras un análisis exhaustivo de valores n
 ### 2. Proxy de Poder Competitivo
 Se utilizó el Rating Elo por partido como proxy de jerarquía institucional y poder estructural del equipo.
 
-Justificación: Elo captura rendimiento histórico ajustado por calidad del rival, evitando sesgos de clasificación o puntos aislados.
+**Justificación: Elo captura rendimiento histórico ajustado por calidad del rival, evitando sesgos de clasificación o puntos aislados.**
 
 ### 3. Feature Engineering – Métricas de Eficiencia
 Se construyeron métricas específicas para aislar calidad ofensiva del volumen bruto:
@@ -36,73 +37,66 @@ Se construyeron métricas específicas para aislar calidad ofensiva del volumen 
 
 Estas métricas permiten evaluar toma de decisiones ofensiva y calidad de finalización, independientemente de cuántas veces se llegue al área.
 
-4. Exploratory Data Analysis (EDA)
+### 4. Exploratory Data Analysis (EDA)
 
 El análisis incluyó:
 
-Distribuciones globales y benchmarks de eficiencia.
+* Distribuciones globales y benchmarks de eficiencia.
+* Comparativas por liga (medianas, dispersión y rangos inferiores).
+* Análisis de correlación entre:
 
-Comparativas por liga (medianas, dispersión y rangos inferiores).
+a. Elo y volumen ofensivo
 
-Análisis de correlación entre:
+b. Elo y métricas de eficiencia
 
-Elo y volumen ofensivo
+c. Evolución temporal de la eficiencia ofensiva (2012–2025).
 
-Elo y métricas de eficiencia
+d. Identificación de outliers positivos (clubes altamente eficientes con bajo volumen).
 
-Evolución temporal de la eficiencia ofensiva (2012–2025).
+## 📊 Hallazgos Clave
 
-Identificación de outliers positivos (clubes altamente eficientes con bajo volumen).
-
-📊 Hallazgos Clave
-
-Elo ↔ Volumen ofensivo: correlación moderada (r ≈ 0.28).
+**Elo ↔ Volumen ofensivo:** correlación moderada (r ≈ 0.28).
 → El poder competitivo facilita generar oportunidades.
 
-Elo ↔ Conversion Rate: correlación casi nula (r ≈ 0.11).
+**Elo ↔ Conversion Rate:** correlación casi nula (r ≈ 0.11).
 → La eficiencia ofensiva es prácticamente independiente del poder estructural.
 
-La eficiencia está estandarizada en el fútbol élite europeo: las diferencias entre ligas son pequeñas, pero el suelo competitivo varía.
+**La eficiencia está estandarizada en el fútbol élite europeo: las diferencias entre ligas son pequeñas, pero el suelo competitivo varía.**
 
-Bundesliga: mayor mediana y menor dispersión inferior → mayor exigencia estructural de eficiencia.
-
-Serie A: bajo volumen, alta precisión.
-
-Premier League: alto volumen con eficiencia más volátil.
+* Bundesliga: mayor mediana y menor dispersión inferior → mayor exigencia estructural de eficiencia.
+* Serie A: bajo volumen, alta precisión.
+* Premier League: alto volumen con eficiencia más volátil.
 
 Se identificaron casos de optimización extrema (ej. Heidenheim, Nottingham Forest), demostrando que la eficiencia puede compensar limitaciones presupuestales.
 
-🧭 Modelo de Cuadrantes (Aplicación Práctica)
+## 🧭 Modelo de Cuadrantes (Aplicación Práctica)
 
 A partir de los datos se construyó un marco táctico para clasificar perfiles ofensivos:
 
-Alto Volumen / Alta Eficiencia: Dominancia total.
+* **Alto Volumen / Alta Eficiencia:** Dominancia total.
 
-Bajo Volumen / Alta Eficiencia: Sharpshooters (optimización táctica).
+* **Bajo Volumen / Alta Eficiencia:** Sharpshooters (optimización táctica).
 
-Alto Volumen / Baja Eficiencia: Zona de frustración (problemas de decisión).
+* **Alto Volumen / Baja Eficiencia:** Zona de frustración (problemas de decisión).
 
-Bajo Volumen / Baja Eficiencia: Riesgo competitivo.
+* **Bajo Volumen / Baja Eficiencia:** Riesgo competitivo.
 
 Este modelo permite diagnóstico ofensivo accionable para análisis táctico y scouting.
 
-🛠️ Stack Tecnológico
+## 🛠️ Stack Tecnológico
 
-Lenguaje: Python
+* **Lenguaje:** Python
+* **Data Processing:** Pandas, NumPy
+* **Análisis Estadístico:** SciPy
+* **Visualización:** Matplotlib, Seaborn
+* **Metodología:** EDA, Feature Engineering, Sports Analytics
 
-Data Processing: Pandas, NumPy
+## 📄 Entregables
 
-Análisis Estadístico: SciPy
+* Notebook de análisis exploratorio y estadístico.
+* Club Report v1.1 (PDF): traducción estratégica de los hallazgos para contexto club-facing.
 
-Visualización: Matplotlib, Seaborn
-
-Metodología: EDA, Feature Engineering, Sports Analytics
-
-📄 Entregables
-
-Notebook de análisis exploratorio y estadístico.
-
-Club Report v1.1 (PDF): traducción estratégica de los hallazgos para contexto club-facing.
+---
 
 Desarrollado por:
 Dan Bernal | Football Analytics
