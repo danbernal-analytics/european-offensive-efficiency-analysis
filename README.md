@@ -32,7 +32,9 @@ Se utilizó el Rating Elo por partido como proxy de jerarquía institucional y p
 Se construyeron métricas específicas para aislar calidad ofensiva del volumen bruto:
 
 `Conversion Rate` = Goles / Tiros Totales
+
 `Shot Accuracy` = Tiros a Puerta / Tiros Totales
+
 `Target Conversion Rate` = Goles / Tiros a Puerta
 
 Estas métricas permiten evaluar toma de decisiones ofensiva y calidad de finalización, independientemente de cuántas veces se llegue al área.
