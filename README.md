@@ -47,13 +47,13 @@ El análisis incluyó:
 * Comparativas por liga (medianas, dispersión y rangos inferiores).
 * Análisis de correlación entre:
 
-a. Elo y volumen ofensivo
-
-b. Elo y métricas de eficiencia
-
-c. Evolución temporal de la eficiencia ofensiva (2012–2025).
-
-d. Identificación de outliers positivos (clubes altamente eficientes con bajo volumen).
+        a. Elo y volumen ofensivo
+        
+        b. Elo y métricas de eficiencia
+        
+        c. Evolución temporal de la eficiencia ofensiva (2012–2025).
+        
+        d. Identificación de outliers positivos (clubes altamente eficientes con bajo volumen).
 
 ## 📊 Hallazgos Clave
 
